@@ -6,6 +6,18 @@
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
 }
+body{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  display: flex;
+  flex-grow: 1;
+  z-index: -1;
+}
 
 .main {
   min-height: 100vh;
@@ -16,34 +28,19 @@
   align-items: center;
   justify-content: center;
 }
-
-.main .image-container {
-  padding: 10px;
-}
-
-.main .image-container .image {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main .image-container .image img {
-  width: 170px;
-  align-items: center;
-}
-
-.main .image-container h1 {
-  color: #00bcd4;
+.main h1 {
+  color: #64697a;
   text-align: center;
-  margin-bottom: 10px;
+  margin:2rem;
   font-size: 40px;
 }
 
-.main .image-container p {
+.main  p {
   color: #324042;
   text-align: center;
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
 .main .input {
@@ -54,6 +51,7 @@
   height: 50px;
   border-radius: 20px;
   background: rgb(202 253 255 / 50%);
+  border: 2px solid black;
 }
 
 .main .input .talk {
@@ -71,11 +69,14 @@
 
 .main .input .talk i {
   font-size: 20px;
-  color: #aed0d0;
+  color:rgb(7, 7, 7) ;
 }
 
 .main .input .content {
-  color: #aed0d0;
+  color: #011010;
   font-size: 15px;
   margin-right: 20px;
+}
+.input .content{
+  margin-left: 5px;
 }
