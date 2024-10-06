@@ -62,6 +62,11 @@ function speakThis(message) {
     }
 
     // Opening websites
+    else if(message.includes('open Ghub')) {
+        window.open("https://github.com/", "_blank");
+        const finalText = "Opening github";
+        speech.text = finalText;
+    }
     else if(message.includes('open google')) {
         window.open("https://google.com", "_blank");
         const finalText = "Opening Google";
@@ -166,12 +171,6 @@ function speakThis(message) {
         const finalText = "Switching to the next tab";
         speech.text = finalText;
         // Switching tabs isn't supported natively in JavaScript without browser extensions.
-    }
-
-    // General search
-    else if(message.includes('explain your function') || message.includes('explain code')) {
-        const finalText = `This code listens to your voice using speech recognition. It responds to basic commands like greeting, opening websites, doing math calculations, telling jokes, setting reminders, and searching the internet. It uses speech synthesis to speak responses back to you.`;
-        speech.text = finalText;
     }
 
     // General search
